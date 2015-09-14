@@ -9,9 +9,9 @@ class ContactsController < ApplicationController
 
   def index
     @contacts = Contact.all
-    render :partial => 'contacts/contact',
-      :locals => {:contacts => @contacts}
+    render :partial => 'contacts/contact', :locals => {:contacts => @contacts}
   end
+
 
 
 

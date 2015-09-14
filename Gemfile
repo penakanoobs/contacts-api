@@ -7,13 +7,9 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'pg', '~> 0.18.2'
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

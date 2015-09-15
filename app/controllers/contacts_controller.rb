@@ -17,6 +17,14 @@ class ContactsController < ApplicationController
     end
   end
 
+  def update
+    @contact = Contact.find params[:id]
+    if @contact.update_attributes(contact_params)
+      render :json => {:message => 'Contact edited successfully'}
+    end
+  end
+
+
 
 
 

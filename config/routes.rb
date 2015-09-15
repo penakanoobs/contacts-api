@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   resources :users, :only => [:create]
-  resources :contacts, :only => [:create, :index]
+  resources :contacts, :only => [:create, :index, :show]
 
   # Example resource route with options:
   #   resources :products do

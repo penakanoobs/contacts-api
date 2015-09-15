@@ -1,12 +1,5 @@
 class ContactsController < ApplicationController
 
-  def create
-    @contact = Contact.new contact_params
-    if @contact.save
-      render :json => {:message => 'Contact added successfully'}
-    end
-  end
-
   def index
     @contacts = Contact.all
     render :partial => 'contacts/contacts', :locals => {:contacts => @contacts}
@@ -16,6 +9,14 @@ class ContactsController < ApplicationController
     @contact = Contact.find params[:id]
     render :partial => 'contacts/details', :locals => {:contact => @contact}
   end
+
+  def create
+    @contact = Contact.new contact_params
+    if @contact.save
+      render :json => {:message => 'Contact added successfully'}
+    end
+  end
+
 
 
 
